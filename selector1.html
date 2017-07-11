@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+/* 선택자 {속성명:값; 속성명:값} */
+/* * {color:Beige; background-color:#008000 } */
+
+/* h1 {color:Beige; background-color:#008000} */
+
+.cla {color:red}
+#id {color:orange}
+[type=text] {background-color:gold; color:red;
+border-color:green; border-width:5px; border-style:dashed}
+[type=text]:hover {background-color:red}
+[type=text]:focus {background-color:blue}
+
+a:link {text-decoration:none; color:green} 
+a:visited {text-decoration:none; color:green}
+a:hover {text-decoration:underline}
+
+p:first-letter {color:orange; border-style:solid;
+border-radius:3px; border-width:3px; font-size:30px}
+
+.cla:first-letter {color:blue}
+#id:first-letter {color:green}
+
+</style>
+</head>
+<body>
+
+<h1 class="cla">안녕하세요</h1>
+<h1 id="id">반갑습니다</h1>
+
+<p>동해물과 백두산이</p>
+<b>굵게</b><br>
+
+<input type="text">
+<input type="password"><br><br>
+
+<a href="https://www.naver.com/">네이버</a>
+
+</body>
+</html>
