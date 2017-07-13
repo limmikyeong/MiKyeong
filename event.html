@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+
+#txt {color:red}
+
+</style>
+<script src="./js/jquery-3.2.1.js"></script>
+<script>
+	
+	$(function() {
+		//alert("시작");
+		/* $("#btn").on("click", function() {
+			alert("버튼클릭");
+		}); */
+		
+		//val-매개변수없으면 get/있으면 set개념(val은 값 얻어오는 것)
+		$("#btn").click(function() {
+			//$("#txt").val("버튼내용");
+			//alert($("#txt").val());
+			
+			//text()만 쓰면 값을 얻어오겠다는 뜻 => ()안에 넣은 값을 얻어오겠다는 뜻
+			//$("span").text( $("#txt").val() );
+			
+			//$("span").html("<h1>" + $("#txt").val() + "</h1>");
+			
+			//this는 선택자 #btn을 가리킴
+			//console.log($(this).prev().prev().next());
+			
+			//$(this).prev().prev().next().css("color","red")
+			
+			//$("#txt2").val($("#txt").val());
+			
+			$(this).next().html( $("#txt").val() - $("#txt2").val() )	
+		
+		});
+	
+	
+	});
+</script>
+</head>
+<body>
+	<input type="text" id="txt">
+	<span></span>
+	<input type="text" id="txt2">
+	<input type="button" value="이벤트 연습" id="btn">
+	<span></span>
+
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="./js/jquery-3.2.1.js"></script>
+<script>
+
+	$(function(){
+		$("#btn").on("click",function() {
+			
+			//div태그의 문자를 조작
+			//$("div").html("<h1>html()</h1>");
+			
+			//div태그의 앞 뒤로 자식생김
+			//$("div").append("<h1>append()</h1>");
+			//$("div").prepend("<h1>prepend()</h1>");
+			
+			
+			//$("<h1>appendTo()</h1>").appendTo("div");
+			
+			//$("div").before("<h1>before()</h1>");
+			//$("div").after("<h1>after()</h1>");
+			
+			//div의 후손중 ol을 찾아서 그 자식으로 추가
+			//$("div").find("ol").prepend("<li>HELLO</li>");
+			
+			$("div").find("ol").prepend("<li>" + $("#txt").val() + "</li>");
+			
+		});
+		
+		
+		
+	});
+
+
+
+</script>
+</head>
+<body>
+	<!-- <div>div</div>
+	<input type="button" value="DOM 테스트" id="btn"> -->
+	
+	<input type="button" value="DOM 테스트" id="btn">
+	<input type="text" id="txt">
+	<div>
+		<ul></ul>
+		<ol></ol>
+	
+	</div>
+	
+</body>
+</html>

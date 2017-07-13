@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="./js/jquery-3.2.1.js"></script>
+<script>
+	 $(function() {
+		$("#img").on("mouseover", function() {
+
+			$(this).attr("src", "어피치4.jpg");
+		}).on("mouseout", function(){
+			$(this).attr("src", "어피치3.jpg");
+		});
+
+	//on없이 쓰는 방법
+	//이어서 못 쓰고 따로 써줘야 함
+	/* $(function() {
+		$("#img").mouseover(function() {
+
+			$(this).attr("src", "어피치4.jpg");
+		});
+		
+		$("#img").mouseout(function(){
+			$(this).attr("src", "어피치3.jpg");
+		});
+	}); */
+
+	//------------------
+	// 이미지 처리 이벤트
+	//------------------
+	/* $("#img").on({
+		mouseover: function(){$(this).attr("src", "어피치4.jpg") },
+		mouseout: function(){$(this).attr("src", "어피치3.jpg") }
+	}); */
+	
+	
+	$("#all").on("click",function() {
+		
+		console.log($("#all").prop("checked"));
+		$("[type=checkbox]").prop("checked", $("#all").prop("checked"));
+		
+	});
+	
+}); 
+	
+</script>
+</head>
+<body>
+	<img src="어피치3.jpg" id="img"><br>
+	
+	<input type="checkbox" id="all">모두 선택<br>
+	
+	<input type="checkbox">1번
+	<input type="checkbox">2번
+	<input type="checkbox">3번
+
+</body>
+</html>

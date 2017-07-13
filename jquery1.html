@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="./js/jquery-3.2.1.js"></script>
+<script>
+	$(function() {
+		//alert("ggg");
+
+		//jquery에서 css사용
+		//$("*").css("color","red");
+		//$(".cla").css("color","red");
+
+		//속성은 []사용
+		$("[type='text']").css("border-style", "solid").css("border-color","green")
+
+		//$("ol > li").parent().parent().find("p").css("color","red")
+		
+		$("ol > li").filter(":even").css("color","red");
+		
+	});
+</script>
+
+</head>
+<body>
+
+	<h1 class="cla">안녕하세요</h1>
+	<h1 id="id">안녕하세요</h1>
+	<p>안녕하세요</p>
+
+	<input type="text">
+	<input type="password">
+
+	<ul>
+		<li>피자
+		<li>파스타
+	</ul>
+
+	<ol>
+		<li>피자
+		<li>파스타
+		<li>치킨
+	</ol>
+
+
+</body>
+</html>
